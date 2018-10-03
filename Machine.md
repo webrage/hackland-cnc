@@ -13,10 +13,10 @@
   * ensure the milling cover is on for dust extraction
 
 2. __Safety__
-  * make sure there are no tripping hazards in the work area
-  * never put your hands on the rails of the CNC machine
-  * let people know the CNC machine will be turn on
-  * use ear muffs (noisy), eye protection (things can fly off CNC), dust-mask (dust protection,especially for long jobs) …
+    * make sure there are no tripping hazards in the work area
+    * never put your hands on the rails of the CNC machine
+    * let people know the CNC machine will be turn on
+    * use ear muffs (noisy), eye protection (things can fly off CNC), dust-mask (dust protection,especially for long jobs) …
 
 3. __Check spindle coolant levels__
   * check the coolant level of the red tank under the table next to the CNC control box
