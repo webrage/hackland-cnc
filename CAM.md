@@ -24,19 +24,19 @@ Cam's documents some one time Fusion 360 setup steps needed for the CAM process 
 2. __layout the components__ - using mapboards or similar
 3. __dogbone__ the components
 4. __model the screw restraint locations__
-  * every 500mm - less if material is thin or has a bow in it
+    * every 500mm - less if material is thin or has a bow in it
 5. __Change to the CAM toolbar__
 
 #### Fusion 360 CAM toolbar
 1. __New Setup__
 2. __Fusion 360 Operations template__ - to create a draft CAM setup
-  * Right click setup | create from template
+    * Right click setup | create from template
 3. __Select the tools you wish to use__ in your operations from the mechmate 74 library
 4. __Adjust setup operations__ as necessary
 5. __Preview the CAM Setup__
 6. __Create the gcode__ - .tap file
-  * Give it a good name that will distinguish it as yours *- not “gcode.tap”!*
-  * Put on USB drive ready to transfer to the MechMate CNC computer
+    * Give it a good name that will distinguish it as yours *- not “gcode.tap”!*
+    * Put on USB drive ready to transfer to the MechMate CNC computer
 
 #### Standard Process Steps
 It is useful to think of the CNC process as a number of standard process steps that are completed in a standard order. At the end of each process step the CNC machine should stop (for a tool change). *If the next step has the same tool - just click OK on the computer to carry on*
