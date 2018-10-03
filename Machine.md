@@ -1,26 +1,9 @@
 # MECHMATE
 #### *[CAD](CAD.md) ==> [CAM](CAM.md) ==>* MACHINE CONTROL
 
-The notes below assumes:
-* __CAD__: you have created you design in Fusion 360 or other package
-* __CAM__: You have used the CAM feature in Fusion 360 or other package to create a suitable gcode file to be used on the Hackland MechmMate CNC machine.
-
-This includes:
-  * 2D version of your model (perhaps using the mapboards Fusion 360 plugin)
-  * “Dogboned” corners as needed
-  * Added tabs to keep the work secure as needed
-  * Used milling tools from the Hackland tool library
-  * Specified the size of your workpiece and the thickness of the ply you are using
-  * Created gcode file (a .tap file) and given it a name that identifies your project
-  * Put the gcode file on a USB file - ready to be imported into the MACH3 CNC software
-  * Separated the Job into sensible process steps (the order of steps matter). For example:
-    * Hold Down - Drill holes for hold down (secure workpiece to CNC after this step)
-    * Drill Holes - drilling
-    * Countersync - countersyncing
-    * Engraving - any shallow engraving
-    * Pockets - mill any pockets that do not penetrate the work
-    * Profile Internal - cut all components with internal holes
-    * Profile External - finish cutting out components, leaving tabs to secure work+
+ *The notes below assumes:*
+* __CAD__ *: you have created you design in Fusion 360 or other package*
+* __CAM__ *: You have used the CAM feature in Fusion 360 or other package to load a suitable gcode file onto a USB drive ready to be used on the Hackland MechmMate CNC machine. Refer to [CAM](CAM.md) for a list of the requirements*
 
 ### CNC Startup Steps
 1. __Clear up on and around the CNC router__
@@ -61,7 +44,7 @@ This includes:
   * Use __arrow buttons__ to move in X & Y directions; or __shift-arrow__ moves more quickly
   * Use __PageUp__ and __PageDown__ to move in Z directions (Don’t move Z too far up or down)
   *Remember that you are zeroing the machine coordinates when there is NOT a red box around the  Machine Coordinates button.*
-  * Set the job coordinates to X=0 , Y=0 by pressing the Zero X and Zero Y buttons
+  * Set the job coordinates to X=0 , Y=0 by pressing the __Zero X__ and __Zero Y__ buttons
   * __Regen Toolpath__ - look at the display (Toggle Display Mode if needed) showing the location of your job relative to the table. The cross hairs should be over the left hand corner of your job.
   *Note, don’t worry about Z-axis, this zeros automatically when the tool zeros.*
   *Note also that Z is homed to top, so touching the work with the mill is a -ve number*
@@ -73,6 +56,7 @@ This includes:
 7. __Start running the gcode__
   * __Cycle Start__
 
+
 ### CNC Shutdown Steps
 1. __Clean up the machine area__
   * Take the work off the machine - jog the machine out of the way if need be
@@ -91,13 +75,14 @@ This includes:
   * Make sure you have you USB stick
 
 ### Troubleshooting / Issues
-cstewart000@gmail.com
+Refer to Cam's list of current issues on his [website](https://hackingismakingisengineering.wordpress.com/mechmate-74-hackland-user-guide/#troubleshooting).
+Send an email to <mechmate74@gmail.com>
+
 
 ### Recommended Links
 * [Mechmate-74-hackland-user-guide](https://hackingismakingisengineering.wordpress.com/mechmate-74-hackland-user-guide/) *- Cams User Guide*
-* [Mach3 User Interface]()                  - Mach3 User Interface
-* [Mach3 Coords Video]()                     - Mach3 CNC Controller, Homing / Limits / Offsets
-
+* [Mach3 User Interface](https://www.youtube.com/watch?v=08qK4NfnXqA) *- Video overview of the Mach3 User Interface*
+* [Mach3 Coords](https://youtu.be/ACx64oWwbMc) *- Video of Mach3 CNC Controller, Homing / Limits / Offsets*
 
 ### Other Links
 * [Cams Blog](https://hackingismakingisengineering.wordpress.com/) *- Cams Blog*
