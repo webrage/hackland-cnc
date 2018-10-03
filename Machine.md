@@ -101,10 +101,9 @@
 
 ### Troubleshooting / Issues
 * Refer to Cam's list of current issues on his [website](https://hackingismakingisengineering.wordpress.com/mechmate-74-hackland-user-guide/#troubleshooting).
-* Send an email to <mechmate74@gmail.com>
+* Send an email to <mechmate74@gmail.com> if:
   * an issue is discovered *- whether or not it is resolved*
-  * if you do not leave the CNC router in a working state for any reason
-
+  * you do not leave the CNC router in a working state for any reason
 
 ### Recommended Links
 * [Mechmate-74-hackland-user-guide](https://hackingismakingisengineering.wordpress.com/mechmate-74-hackland-user-guide/) *- Cams User Guide*
