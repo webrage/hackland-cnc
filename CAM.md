@@ -1,19 +1,18 @@
 # CAM *- Fusion 360*
 #### *[CAD](CAD.md) ==>* CAM *==> [MACHINE CONTROL](Machine.md)*
 
-
 ### CAM PURPOSE
 The purpose of the CAM step is to translate what you have designed in your CAD software of choice, into a bunch of instructions *(gcode)* that will work on the *(Hackland)* CNC machine being used to bring your design to life.
 
-I use __Fusion 360__ for both CAD design and for CAM processing. This document describes the CAM process of getting from a Fusion 360 design to a Hackland CNC compatible gcode.
+__Fusion 360__ can be used for both CAD design and for CAM processing. This document describes the CAM process of getting from a Fusion 360 design to a Hackland CNC compatible gcode.
 
 ### CAM setup *- Fusion 360*
 Make sure you have specified the thickness of the ply you are using in the CAD drawing, preferably as a user specified parameter.
 
-Cam's documents some one time Fusion 360 setup steps needed for the CAM process here -    [mechmate-74-hackland-user-guide](https://hackingismakingisengineering.wordpress.com/mechmate-74-hackland-user-guide/#resources).
+Cam's documents some "one time" Fusion 360 setup steps needed for the CAM process here -    [mechmate-74-hackland-user-guide](https://hackingismakingisengineering.wordpress.com/mechmate-74-hackland-user-guide/#resources).
 * Mapboards add-in *- to quickly 2D layout your 3D design - purchase for US$2 from the Fusion 360 store*
 * Dogbone add-in *- quickly add dogbones to your internal corners, so components fit together nicely*
-* Import the Fusion 360 Operations template - use this to help CAM Setup
+* Import the Fusion 360 Operations template - use this to quickly set up a draft standard CAM setup *- you can simply delete any process steps not required*
 * Import the mechmate 74 library - use these tools which are available in Hackland
 
 
@@ -39,40 +38,51 @@ Cam's documents some one time Fusion 360 setup steps needed for the CAM process 
     * Put on USB drive ready to transfer to the MechMate CNC computer
 
 #### Standard Process Steps
-It is useful to think of the CNC process as a number of standard process steps that are completed in a standard order. At the end of each process step the CNC machine should stop (for a tool change). *If the next step has the same tool - just click OK on the computer to carry on*
-1. __Hold Down__
-   * drill holes for hold down the workpiece during the more vigurous operations that follow.
-   * secure workpiece to CNC after this step
-2. __Drill holes__
-   * __Tool | Tool__ e.g. #24 - 4mm drill - from the Hackspace drill library
-   * __Geometry | Hole Mode__ Selected Faces
-   *  __Geometry | Hole Faces__ rember to select a cylinder face from your work *- you may need to turn off any filtering*
-   * __Geometry | Select Same Diameter__ True
-   * __Geometry | Optimize order__ True
-3. __Countersync holes__
-   * __Tool | Tool__ e.g
-   * __Geometry | Contour Selection__
-4. __Engraving__ - any shallow engraving
-   * __Tool | Tool__ e.g
-   * __Geometry | Contour Selection__ remember to select bottom contours of components
-5. __Pockets__ - mill any pockets that do not penetrate the work
-   * __Tool | Tool__ e.g #162 5.5 mm flat *- from the Hackspace drill library*
-   * __Geometry | Contour Selection__ remember to select bottom contours of components
-6. __Profile Internal__ - cut all components with internal holes
-   * __Tool | Tool__ e.g #162 5.5 mm flat *- from the Hackspace drill library*
-   * __Geometry | Contour Selection__ remember to select bottom contours of components
-7. __Profile External__ - finish cutting out components, leaving tabs to secure work+
-   * __Tool | Tool__ e.g #162 5.5 mm flat *- from the Hackspace drill library*
-   * __Geometry | Contour Selection__ remember to select bottom contours of components
-   * __Geometry | Tabs__ True
-   * __Geometry | Tab Shape__ Rectangular
-   * __Geometry | Tab width__ 5.5 mm
-   * __Geometry | Tab height__ 2 mm
-   * __Geometry | Tab Positioning__ By Distance
-   * __Geometry | Tab Distance__ 150 mm
-8. __Camfering__
-   * __Tool | Tool__ e.g
-   * __Geometry | Contour Selection__
+It is useful to think of the CNC process as a number of standard process steps that are completed in a standard order. Not all of these steps will be needed for every job. At the end of each process step the CNC machine should stop (for a tool change). *If the next step has the same tool - just click OK on the computer to carry on*
+1. __Drill Hold Down Holes__
+     * drill holes for hold down the work-piece during the more vigorous operations that follow.
+     * secure work-piece to CNC after this step
 
-### Links
+2. __Drill holes__
+     * __Tool | Tool__ e.g. #24 - 4mm drill - from the Hackspace drill library
+     * __Geometry | Hole Mode__ Selected Faces
+     *  __Geometry | Hole Faces__ rember to select a cylinder face from your work *- you may need to turn off any filtering*
+     * __Geometry | Select Same Diameter__ True
+     * __Geometry | Optimize order__ True
+
+3. __Countersync holes__
+     * __Tool | Tool__ e.g
+     * __Geometry | Contour Selection__
+
+4. __Engraving__ - any shallow engraving
+     * __Tool | Tool__ e.g
+     * __Geometry | Contour Selection__ remember to select bottom contours of components
+
+5. __Pockets__ - mill any pockets that do not penetrate the work
+     * __Tool | Tool__ e.g #162 5.5 mm flat *- from the Hackspace drill library*
+     * __Geometry | Contour Selection__ remember to select bottom contours of components
+
+6. __Profile Internal__ - cut all components with internal holes
+     * __Tool | Tool__ e.g #162 5.5 mm flat *- from the Hackspace drill library*
+     * __Geometry | Contour Selection__ remember to select bottom contours of components
+
+7. __Profile External__ - finish cutting out components, leaving tabs to secure work+
+     * __Tool | Tool__ e.g #162 5.5 mm flat *- from the Hackspace drill library*
+     * __Geometry | Contour Selection__ remember to select bottom contours of components
+     * __Geometry | Tabs__ True
+     * __Geometry | Tab Shape__ Rectangular
+     * __Geometry | Tab width__ 5.5 mm
+     * __Geometry | Tab height__ 2 mm
+     * __Geometry | Tab Positioning__ By Distance
+     * __Geometry | Tab Distance__ 150 mm
+     
+8. __Camfering__
+     * __Tool | Tool__ e.g
+     * __Geometry | Contour Selection__
+
+### Recommended Links
 * [mechmate-74-hackland-user-guide](https://hackingismakingisengineering.wordpress.com/mechmate-74-hackland-user-guide/)
+* https://github.com/caseycrogers/Dogbone - Dogbone add-in
+
+### Other Links
+* https://github.com/tapnair              - some Fusion 360 add-ins

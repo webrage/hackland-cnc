@@ -3,7 +3,7 @@
 
  *The notes below assumes:*
 * __CAD__ *: you have created you design in Fusion 360 or other package*
-* __CAM__ *: You have used the CAM feature in Fusion 360 or other package to load a suitable gcode file onto a USB drive ready to be used on the Hackland MechMate CNC machine. Refer to [CAM](CAM.md) for a list of the requirements*
+* __CAM__ *: you have used the CAM feature in Fusion 360 or other package to load a suitable __gcode__ file onto a USB drive ready to be used on the Hackland MechMate CNC machine. Refer to [CAM](CAM.md) for info on this step*
 
 ### CNC Startup Steps
 1. __Clear up on and around the CNC router__
@@ -60,7 +60,12 @@
   * press the __Cycle Start__ button
   * Restrain the work once the drilling of restraining holes complete *- If drilling restraining holes, this should be the first CNC process in your gcode*
   * return the feed rate to 100% *- when job is running as expected*
-
+
+### CNC Operating Rules of thumb
+* __Tight, but not over-tight__
+  *  try not to over tighten when doing a tool change
+* __Don't distract the PC__
+  * try not load or run other programs on the CNC PC - especially when running the CNC machine. *The CNC machine operates over very short timing cycles, such that the PC needs to "concentrate hard" on running the job and not be "distracted" by non critical stuff. It the PC gets out of step with the CNC machine the job will throw an error*
 
 ### CNC Shutdown Steps
 1. __Clean up the machine area__
