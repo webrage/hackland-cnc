@@ -28,6 +28,14 @@ Cam's documents some "one time" Fusion 360 setup steps needed for the CAM proces
 
 #### Fusion 360 CAM toolbar
 1. __New Setup__
+    * __Setup | Setup__ Milling
+    * __WCS | Orientation__ Model Orientation
+    * __WCS | Origin__ Stock box point
+    * __WCS | Stock Point__ This is __important!__ select the BOTTOM left hand corner of the stock.
+    * __Model | Model__ select the stock and work bodies to mill
+    * __Stock | Mode__ Relative size box
+    * __Stock | Stock Offset Mode__ No additional stock
+    * __Post Process | Program Name__ your-model-name
 2. __Fusion 360 Operations template__ - to create a draft CAM setup
     * Right click setup | create from template
 3. __Select the tools you wish to use__ in your operations from the mechmate 74 library
@@ -75,7 +83,7 @@ It is useful to think of the CNC process as a number of standard process steps t
      * __Geometry | Tab height__ 2 mm
      * __Geometry | Tab Positioning__ By Distance
      * __Geometry | Tab Distance__ 150 mm
-     
+
 8. __Camfering__
      * __Tool | Tool__ e.g
      * __Geometry | Contour Selection__
