@@ -15,17 +15,17 @@
 2. __Safety__
     * make sure there are no tripping hazards in the work area
     * never put your hands on the rails of the CNC machine
-    * let people know the CNC machine will be turn on
+    * let people know the CNC machine will be turn on (noisy)
     * use ear muffs (noisy), eye protection (things can fly off CNC), dust-mask (dust protection,especially for long jobs) …
 
 3. __Check spindle coolant levels__
     * check the coolant level of the red tank under the table next to the CNC control box
-    * __If low ...__
+    * __If low ...????__
 
 4. __Turn on CNC__
-    * turn on the turn the CNC machine
-      * turn the red switch to the ON position (CNC control box)
-      * push the top Green button ON (CNC control box)
+    * turn on the CNC machine
+      * turn the red switch to the ON position (on CNC control box)
+      * push the top Green button ON (on CNC control box)
     * turn on the Coolant Pump *- this is the red tank under the table next to control box, plug it in, and/or or turn on power on the power board*
     * Turn on the Dust Extractor
 
@@ -34,9 +34,11 @@
     * Open Mach3 software
 
 ### Job Setup Steps
-1. __Load the gcode__ (.tap file)
-    * in Mach3 __Load GCode__ *- to load from your USB drive inserted into CNC computer*
-    * check the gcode *- make sure it is your file and the gcode looks OK*
+1. __Load the gcode__
+    * in Mach3 __Load GCode__ and browse to the .tap file on your USB drive *- inserted into CNC computer*
+    * check the gcode looks OK
+      * make sure you have loaded the correct file
+      * If you have a drilling operation, check your Z-min value, if it is -ve by more than a few mm something is wrong with your coordinates *- as it is telling the CNC machine to not only drill through your work but to keep going!*
 
 2. __Zero the CNC machine X & Y coordinates?__
     * to zero the machine - press the __REF ALL HOME__ button.
@@ -50,27 +52,40 @@
     * restrain it now - *unless you are using the CNC machine to drill some safe restraining holes*
 
 4. __Zero the Job X & Y coordinates__
-    * Jog machine to the bottom left hand corner of your job.
-      * __arrow buttons__ move in the X & Y directions slowly
-      * __shift-arrow__ moves in the X & Y directions quickly
-      * __PageUp__ & __PageDown__ move in the Z directions *- be careful not to move the router too far up or down*
-    * Set the job coordinates to X=0 , Y=0 by pressing the __Zero X__ and __Zero Y__ buttons - *remember that you are zeroing the machine coordinates when there is NOT a red box around the __Machine Coordinates__ button.*
+    * Jog machine to the bottom left hand corner of your job *- it is assumed you have set up your CAM work origin at this point*
+    * Set the job coordinates to X=0 , Y=0 by pressing the __Zero X__ and __Zero Y__ buttons - *remember that you are zeroing the job coordinates when there is NOT a red box around the __Machine Coordinates__ button.*
     * __Regen Toolpath__ - look at the display (Toggle __Display Mode__ if needed) showing the location of your job relative to the table. The cross hairs should be over the left hand corner of your job.
     * *Note, don’t worry about Z-axis, this zeros automatically when the tool zeros.*
-    * *Note also that Z is homed to the top, so touching the work with the mill is displayed as a -ve number*
+    * *Note also that Z is homed to the top, so touching the work with the mill is displayed as a -ve number in the Machine Coordinate system*
 
 5. __Trace the job to make sure if all fits on the stock__
     * Check toolpath looks OK
-    * make sure the job is oriented correctly -
+    * make sure the job is oriented correctly
     * check all fits on the stock
 
 6. __Override feed rate to 10%__
-    * return to 100% when job is running as expected.
+    * return to 100% when job is running as expected.  __???set automatically after tool change???__
 
 7. __Start running the gcode__
     * press the __Cycle Start__ button
     * Restrain the work once the drilling of restraining holes complete *- If drilling restraining holes, this should be the first CNC process in your gcode*
     * return the feed rate to 100% *- when job is running as expected*
+
+### Jogging the machine
+* __arrow buttons__ move in the X & Y directions slowly
+* __shift-arrow__ moves in the X & Y directions quickly
+* __PageUp__ & __PageDown__ move in the Z directions *- be careful not to move the router too far up or down*
+
+### CNC Tool Changes
+There are two spanners that are used for tool changes, a smaller one and a bigger one.  If you always take the small one in your left hand and the big one in your right hand, then:
+* __to undo:__ pull the spanners together
+* __to tighten:__ push the spanners apart
+
+*Try not to over tighten when doing a tool change.*
+
+*Put a knee on the ground when doing a tool change so as to keep you balance. Also watch you head, as it is easy to bump it when getting up. I have learned both of these things the hard way :)*
+
+
 
 ### CNC Operating Rules of thumb
 * __Tight, but not over-tight__
@@ -78,6 +93,9 @@
 
 * __Don't distract the PC__
     * try not load or run other programs on the CNC PC - especially when running the CNC machine. *The CNC machine operates over very short timing cycles, such that the PC needs to "concentrate hard" on running the job and not be "distracted" by non critical stuff. It the PC gets out of step with the CNC machine the job will throw an error :(*
+
+
+
 
 ### CNC Shutdown Steps
 1. __Clean up the machine area__
