@@ -91,7 +91,7 @@ It is useful to think of the CNC process as a number of standard process steps t
      * __Geometry | Tab width__ 5.5 mm
      * __Geometry | Tab height__ 2 mm
      * __Geometry | Tab Positioning__ By Distance
-     * __Geometry | Tab Distance__ 150 mm
+     * __Geometry | Tab Distance__ 150 mm *- less for small potentially wobbly items*
 
 ### STILL TO DO
 
