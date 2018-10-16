@@ -19,15 +19,25 @@ Cam's documents some "one time" Fusion 360 setup steps needed for the CAM proces
 ### CAM Steps *- Fusion 360*
 
 #### Fusion 360 Preparation
-1. __create components__ - from the bodies you have created
-2. __layout the components__ - using mapboards or similar
-3. __dogbone__ the components
-4. __model the screw restraint locations__
+1. select __Model toolbar__ for the following steps (if needed)
+2. *right-click* __bodies  | create components__ to create components from the bodies you have selected
+3. __Create | Mapboards__ to layout the components
+    * __Lumber__ maximum of 1200 x 2400mm  (also select material)
+    * __Arrange type__ Matching Lengths Vertical
+    * __Saw Kerf__ 10mm
+    * __Trim on Board Edge__ 6.35mm
+    * __Map Orientation__ Z up
+4. __Create | Dogbone__ to dogbone the components
+    * select the __components__ you wish to dogbone
+    * __tool diameter__ 6mm
+    * __select up plane__ Z *- assuming board is on XY plane*
+5. __model the screw restraint locations__
     * every 500mm - less if material is thin or has a bow in it
-5. __Change to the CAM toolbar__
+    * create a new sketch, and put __points__ on the sketch where you want the restraint screws to go
+6. __Change to the CAM toolbar__
 
 #### Fusion 360 CAM toolbar
-1. __New Setup__
+1. __Setup | New Setup__
     * __Setup | Setup__ Milling
     * __WCS | Orientation__ Model Orientation
     * __WCS | Origin__ Stock box point
