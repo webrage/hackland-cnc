@@ -63,7 +63,6 @@ It is useful to think of the CNC process as a number of standard process steps t
      * __Tool | Tool__ e.g. #24 - 4mm drill - from the Hackspace drill library
      * __Geometry | Hole Mode__ Selected Points
      * __Geometry | Hole Points__ Select one of the points to drill
-     * secure work-piece to CNC after this step
      * __Geometry | Select Same Diameter__ True
      * __Geometry | Optimize order__ True     
 
@@ -76,16 +75,15 @@ It is useful to think of the CNC process as a number of standard process steps t
      * __Geometry | Optimize order__ True
 
 
-
-5. __Pockets__ - mill any pockets that do not penetrate the work
+3. __Pockets__ - mill any pockets that do not penetrate the work
      * __Tool | Tool__ e.g #162 5.5 mm flat *- from the Hackspace drill library*
      * __Geometry | Contour Selection__ remember to select bottom contours of components
 
-6. __Profile Internal__ - cut all components with internal holes
+4. __Profile Internal__ - cut all components with internal holes
      * __Tool | Tool__ e.g #162 5.5 mm flat *- from the Hackspace drill library*
      * __Geometry | Contour Selection__ remember to select bottom contours of components
 
-7. __Profile External__ - finish cutting out components, leaving tabs to secure work+
+5. __Profile External__ - finish cutting out components, leaving tabs to secure work+
      * __Tool | Tool__ e.g #162 5.5 mm flat *- from the Hackspace drill library*
      * __Geometry | Contour Selection__ remember to select bottom contours of components
      * __Geometry | Tabs__ True
@@ -95,19 +93,19 @@ It is useful to think of the CNC process as a number of standard process steps t
      * __Geometry | Tab Positioning__ By Distance
      * __Geometry | Tab Distance__ 150 mm
 
+### STILL TO DO
 
-     3. __Countersync holes__
-          * __Tool | Tool__ e.g
-          * __Geometry | Contour Selection__
-
-
-     4. __Engraving__ - any shallow engraving
-          * __Tool | Tool__ e.g
-          * __Geometry | Contour Selection__ remember to select bottom contours of components
+1. __Countersync holes__- after restraining holes before milling
+     * __Tool | Tool__ e.g
+     * __Geometry | Contour Selection__
 
 
+2. __Engraving__ - any shallow engraving - after restraining holes before milling
+     * __Tool | Tool__ e.g
+     * __Geometry | Contour Selection__ remember to select bottom contours of components
 
-8. __Camfering__
+
+3. __Camfering__ - after milling ?
      * __Tool | Tool__ e.g
      * __Geometry | Contour Selection__
 
